@@ -28,7 +28,7 @@ on:
       source_branch:
         description: 'Branch of the source repo to checkout'
         required: true
-        default: 'main'
+        default: 'deposits'
 
 jobs:
   terraform:
@@ -49,7 +49,7 @@ jobs:
       - name: Checkout Operationautomation repo
         uses: actions/checkout@v4
         with:
-          repository: BheemrajRH/Operationautomation
+          repository: Golden-practice/Operationautomation
           ref: ${{ inputs.source_branch }}
           token: ${{ secrets.GH_PAT }}
           path: tf-source
